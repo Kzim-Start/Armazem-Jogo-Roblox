@@ -4,7 +4,7 @@
 
 | Área | Documentação | Catálogo |
 | --- | --- | --- |
-| 00 — Lobby — Refúgio dos Errantes | [Planejamento](00_Refugio_dos_Errantes.md) | Sem catálogo de caça |
+| 00 — Lobby — Refúgio dos Errantes | [Planejamento](00_Refugio_dos_Errantes.md) | [Referência do lobby](../catalogos/00_Refugio_dos_Errantes_Lobby.html) |
 | Ilha 01 — Escarpas Ancestrais | [Planejamento](Ilha_01_Escarpas_Ancestrais_Planejamento.md) | [Catálogo](../catalogos/Ilha_01_Escarpas_Ancestrais.html) |
 | Ilha 02 — Floresta Ancestral | [Planejamento](Ilha_02_Floresta_Ancestral_Planejamento.md) | [Catálogo](../catalogos/Ilha_02_Floresta_Ancestral.html) |
 | Ilha 03 — Planícies dos Ventos | [Planejamento](Ilha_03_Planicies_dos_Ventos_Planejamento.md) | [Catálogo](../catalogos/Ilha_03_Planicies_dos_Ventos.html) |
