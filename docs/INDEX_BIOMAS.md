@@ -13,6 +13,13 @@
 | Ilha 06 — Reino da Geada | [Planejamento](Ilha_06_Reino_da_Geada_Planejamento.md) | [Catálogo](../catalogos/Ilha_06_Reino_da_Geada.html) |
 | Ilha 07 — Abismo Estelar | [Planejamento](Ilha_07_Abismo_Estelar_Planejamento.md) | [Catálogo](../catalogos/Ilha_07_Abismo_Estelar.html) |
 
+## Direção de arte das 21 armaduras
+
+- [Atlas visual interativo de armaduras, com filtros por ilha, criatura e classe](../catalogos/ATLAS_ARMADURAS_21.html)
+- [Matriz técnica das 21 armaduras: silhueta, paleta, materiais, peças e troféus](MATRIZ_IDENTIDADE_VISUAL_ARMADURAS.md)
+
+Esses materiais complementam as imagens e fichas dos sete catálogos HTML originais, sem substituí-los. Os desenhos esquemáticos SVG não são modelos 3D finalizados.
+
 ## Histórico e conciliação
 
 O atlas mais antigo contém sete regiões contando o lobby e atribui os três monstros de pedra ao identificador `refugio`. No projeto atual, o **Refúgio** foi explicitamente definido como lobby livre de monstros e as **Escarpas Ancestrais** são a Ilha 01, com Gravalhor, Torogar e Brontar. Consequentemente, são **sete biomas de caça mais o lobby**.
