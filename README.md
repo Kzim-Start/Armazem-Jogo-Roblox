@@ -1,7 +1,9 @@
 # Fragmentos do Infinito 🌌
 ### Armazém de desenvolvimento | Jogo de aventura e caça no Roblox
 
-**Nova revisão visual (21 silhuetas distintas):** [abrir pranchas e testar em preto e branco](catalogos/PRANCHAS_SILHUETAS_21_V2.html). Desenhos SVG conceituais frontais, não renders/modelos 3D. Mantém todos os catálogos originais.\n\n**Atlas das 21 armaduras (pré-produção):** [ver conceitos visuais SVG](catalogos/ATLAS_ARMADURAS_21.html) · [ver matriz de direção de arte](docs/MATRIZ_IDENTIDADE_VISUAL_ARMADURAS.md). Os catálogos originais de cada ilha estão preservados.
+**Nova revisão visual (21 silhuetas distintas):** [abrir pranchas e testar em preto e branco](catalogos/PRANCHAS_SILHUETAS_21_V2.html). Desenhos SVG conceituais frontais, não renders/modelos 3D. Mantém todos os catálogos originais.
+
+**Atlas das 21 armaduras (pré-produção):** [ver conceitos visuais SVG](catalogos/ATLAS_ARMADURAS_21.html) · [ver matriz de direção de arte](docs/MATRIZ_IDENTIDADE_VISUAL_ARMADURAS.md). Os catálogos originais de cada ilha estão preservados.
 
 > **Status:** Em desenvolvimento · **Plataforma:** Roblox · **Ferramentas:** Blender, Roblox Studio e referências visuais produzidas para o projeto
 
