@@ -32,6 +32,8 @@ A ideia é oferecer no Roblox um ciclo de jogo focado em **preparação, caça, 
 
 Esses elementos representam a **visão de desenvolvimento**, não uma afirmação de que todos os sistemas já estejam implementados.
 
+**Mapas em estudo (pré-produção):** [7 layouts conceituais com 21 pontos de encontro](catalogos/ESTUDOS_MAPAS_7_ILHAS.html). Esses estudos não representam cenários implementados no Roblox Studio.
+
 ## 🏝️ Mundo em desenvolvimento
 
 ### Refúgio dos Errantes — lobby
