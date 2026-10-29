@@ -1,0 +1,380 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Pranchas de Silhuetas — 21 Armaduras | Fragmentos do Infinito</title>
+<style>
+:root{color-scheme:dark;--bg:#0c141b;--card:#17212b;--ink:#edf3f5;--muted:#adbfca;--gold:#f0d3a1}
+*{box-sizing:border-box}body{background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,Segoe UI,Arial,sans-serif;margin:0}
+a{color:#b5dfff}a:hover{color:#e1f1ff}header,main,footer{max-width:1480px;margin:auto;padding:28px}
+header{padding-top:58px;padding-bottom:5px}h1{font:normal clamp(36px,6.5vw,76px)/1.04 Georgia,serif;letter-spacing:-.04em;max-width:1020px;margin:12px 0 19px}
+.lede{color:var(--muted);max-width:930px;font-size:17px}.kicker,.id{color:var(--gold);font-weight:750;text-transform:uppercase;letter-spacing:.13em;font-size:12px}
+nav{display:flex;gap:16px;flex-wrap:wrap;margin-top:25px}.notice{border-left:3px solid #dcac62;background:#1a242c;padding:18px 22px;margin:18px 0 27px;color:#cbd8df;border-radius:0 9px 9px 0}
+.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:24px 0 22px;position:sticky;top:0;background:#0c141be8;backdrop-filter:blur(8px);padding:12px 0;z-index:5}
+input,select,button{font:inherit;background:#182734;color:white;border:1px solid #415766;border-radius:9px;padding:11px 13px;min-height:46px}
+input{flex:1;min-width:200px}button{cursor:pointer}button[aria-pressed="true"]{background:#c8aa74;color:#091219;font-weight:800;border-color:#c8aa74}
+.count{margin-left:auto;color:#efd19c;font-weight:800}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(283px,1fr));gap:17px}
+.card{border:1px solid #344958;background:var(--card);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.portrait{padding:12px 12px 0;background:#101a23}.portrait svg{width:100%;height:auto;display:block}.body{padding:18px;flex:1;display:flex;flex-direction:column}
+h3{font:normal 25px/1.16 Georgia,serif;margin:7px 0 0}.beast{color:var(--muted);margin:4px 0 14px}
+.chips{display:flex;height:10px;gap:5px;margin:0 0 14px}.chips span{flex:1;border-radius:2px}
+dl{display:grid;grid-template-columns:92px 1fr;margin:0;gap:8px 9px}dt{color:#dbcaa7;font-weight:700}dd{color:#d2dfe6;margin:0}
+.body a{display:block;padding-top:16px;margin-top:auto;text-underline-offset:4px}
+.silhouette-mode .silhouette path{fill:#020306!important;stroke:#020306!important}.silhouette-mode .engrave,.silhouette-mode .core{visibility:hidden}.silhouette-mode .portrait svg{background:#dbe1df}.silhouette-mode .portrait svg>rect{fill:#e8e8e1}.silhouette-mode .portrait svg>circle{opacity:0}
+footer{font-size:13px;color:#9cb0bb;padding-bottom:50px}
+@media(max-width:700px){header,main,footer{padding-left:15px;padding-right:15px}.controls{position:static}.controls>*{width:100%}.count{margin-left:0}}
+@media(prefers-reduced-motion:no-preference){.card{transition:transform .15s,border-color .15s}.card:hover{transform:translateY(-3px);border-color:#8ca6b0}}
+</style></head><body>
+<header><div class="kicker">Fragmentos do Infinito · Revisão visual 02 · 29/10/2026</div>
+<h1>21 armaduras, sem depender apenas da cor.</h1>
+<p class="lede">Pranchas <strong>2D de pré-produção</strong> feitas para comparar 21 perfis de elmo, composições de ombreiras, peitorais e motivos de cada Leviante. Cada desenho possui geometria de silhueta própria. As referências originais das sete ilhas continuam intactas.</p>
+<nav><a href="INDEX_BIOMAS.html">Atlas dos biomas</a><a href="ATLAS_ARMADURAS_21.html">Atlas técnico anterior</a><a href="../docs/MATRIZ_IDENTIDADE_VISUAL_ARMADURAS.md">Matriz de materiais e modelagem</a></nav>
+</header>
+<main><aside class="notice"><strong>Estudos de design, não renders nem meshes:</strong> as figuras são vetores esquemáticos frontais. As paletas, anatomias, troféus e receitas históricas devem ser conferidas nos documentos originais. Use a opção "Silhuetas em preto" para detectar conjuntos indistinguíveis sem a ajuda das cores. Ainda é necessário aprovar referências de frente, lado e costas e verificar as artes grandes dos HTMLs antigos antes de modelar no Blender.</aside>
+<div class="controls"><input type="search" id="q" placeholder="Buscar Leviante, armadura ou assinatura" aria-label="Buscar"/>
+<select id="isle" aria-label="Filtrar por ilha"><option value="all">Todas as 7 ilhas</option><option value="0">Ilha 01 — Escarpas Ancestrais</option><option value="1">Ilha 02 — Floresta Ancestral</option><option value="2">Ilha 03 — Planícies dos Ventos</option><option value="3">Ilha 04 — Vale Cristalino</option><option value="4">Ilha 05 — Terras Devastadas</option><option value="5">Ilha 06 — Reino da Geada</option><option value="6">Ilha 07 — Abismo Estelar</option></select>
+<select id="role" aria-label="Filtrar por classe"><option value="all">Predadores e chefes</option><option value="Predador">Só predadores</option><option value="Chefe">Só chefes</option></select>
+<button id="sil" type="button" aria-pressed="false">Silhuetas em preto</button><strong class="count" id="count" aria-live="polite">21 conjuntos</strong>
+</div>
+<div class="grid" id="grid"><article class="card" data-island="0" data-role="Predador" data-query="gravalhor couraça dos desfiladeiros terraços de granito">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Couraça dos Desfiladeiros">
+ <defs><radialGradient id="g0"><stop stop-color="#9a7453" stop-opacity=".23"/><stop offset="1" stop-color="#9a7453" stop-opacity="0"/></radialGradient><pattern id="mat0" width="11" height="19" patternUnits="userSpaceOnUse"><path d="M0 0L10 10" fill="none" stroke="#58b5d4" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g0)"/>
+ <g class="silhouette"><path d="M125 192L106 315 142 315 150 255 164 315 196 315 177 193Z" fill="#423b35" stroke="#9a7453" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#423b35" stroke="#9a7453" stroke-width="5"/>
+ <path d="M128 195L111 244 134 254 147 234 163 255 188 242 171 195Z" fill="#9a7453" stroke="#58b5d4" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M121 116L92 103 69 148 108 164 127 141Z" fill="#9a7453" stroke="#423b35" stroke-width="4"/><path d="M177 116L210 110 216 139 185 151Z" fill="#9a7453" stroke="#423b35" stroke-width="4"/>
+ <path d="M119 125L175 125 185 188 150 209 113 188Z" fill="#423b35" stroke="#9a7453" stroke-width="5"/>
+ <path d="M119 125L175 125 185 188 150 209 113 188Z" fill="url(#mat0)"/>
+ <path d="M122 76L127 49 139 34 154 44 173 36 184 59 178 82 163 91 139 91Z" fill="#423b35" stroke="#9a7453" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#58b5d4" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M117 149L164 132 176 151 128 169Z M125 170L171 156 181 174 141 193Z"/><path d='M100 116L86 121 76 149'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="185" r="6" fill="#58b5d4" stroke="#423b35" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#58b5d4" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#58b5d4">FRENTE · 01</text>
+ </svg></div><div class="body"><span class="id">Ilha 01 · Predador</span><h3>Couraça dos Desfiladeiros</h3><p class="beast">Gravalhor</p><div class="chips"><span style="background:#423b35"></span><span style="background:#9a7453"></span><span style="background:#58b5d4"></span></div><dl><dt>Assinatura</dt><dd>Terraços de granito</dd><dt>Material-chave</dt><dd>Pedra/couro</dd><dt>Troféu</dt><dd>Lajes fraturadas</dd></dl><a href="Ilha_01_Escarpas_Ancestrais.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="0" data-role="Predador" data-query="torogar traje do quebra-rochas presas e cordame">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Traje do Quebra-Rochas">
+ <defs><radialGradient id="g1"><stop stop-color="#b89468" stop-opacity=".23"/><stop offset="1" stop-color="#b89468" stop-opacity="0"/></radialGradient><pattern id="mat1" width="17" height="12" patternUnits="userSpaceOnUse"><path d="M0 5Q8 1 16 5" fill="none" stroke="#dbcc9e" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g1)"/>
+ <g class="silhouette"><path d="M126 191L115 310 141 310 150 250 165 309 190 309 177 192Z" fill="#493226" stroke="#b89468" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#493226" stroke="#b89468" stroke-width="5"/>
+ <path d="M118 199L108 257 129 252 144 235 158 255 186 249 179 200Z" fill="#b89468" stroke="#dbcc9e" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M117 120Q83 94 72 120Q79 154 111 164Z" fill="#b89468" stroke="#493226" stroke-width="4"/><path d="M183 119Q215 91 231 121L205 152Z" fill="#b89468" stroke="#493226" stroke-width="4"/>
+ <path d="M115 126Q149 114 185 128L195 185 158 218 109 187Z" fill="#493226" stroke="#b89468" stroke-width="5"/>
+ <path d="M115 126Q149 114 185 128L195 185 158 218 109 187Z" fill="url(#mat1)"/>
+ <path d="M117 84Q116 42 151 37Q187 42 183 84L175 96H123Z M120 53Q93 41 91 17Q118 23 135 49 M180 53Q209 39 210 19Q188 22 169 49" fill="#493226" stroke="#b89468" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#dbcc9e" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M125 154Q152 134 180 154 M127 167Q150 147 176 167 M124 180L175 180"/><path d='M109 200L90 224 104 232M191 200L208 220 193 232'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="185" r="6" fill="#dbcc9e" stroke="#493226" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#dbcc9e" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#dbcc9e">FRENTE · 02</text>
+ </svg></div><div class="body"><span class="id">Ilha 01 · Predador</span><h3>Traje do Quebra-Rochas</h3><p class="beast">Torogar</p><div class="chips"><span style="background:#493226"></span><span style="background:#b89468"></span><span style="background:#dbcc9e"></span></div><dl><dt>Assinatura</dt><dd>Presas e cordame</dd><dt>Material-chave</dt><dd>Peles/osso</dd><dt>Troféu</dt><dd>Presa de quadril</dd></dl><a href="Ilha_01_Escarpas_Ancestrais.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="0" data-role="Chefe" data-query="brontar vigia das pontes arcos e vigas">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Vigia das Pontes">
+ <defs><radialGradient id="g2"><stop stop-color="#788d95" stop-opacity=".23"/><stop offset="1" stop-color="#788d95" stop-opacity="0"/></radialGradient><pattern id="mat2" width="17" height="19" patternUnits="userSpaceOnUse"><path d="M5 0V19" fill="none" stroke="#87c0df" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g2)"/>
+ <g class="silhouette"><path d="M112 196L93 315 132 315 147 255 165 315 205 315 184 196Z" fill="#353c3a" stroke="#788d95" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#353c3a" stroke="#788d95" stroke-width="5"/>
+ <path d="M115 200L92 277 126 291 151 274 181 291 206 277 184 197Z" fill="#788d95" stroke="#87c0df" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M121 119L86 101 64 117 67 157 108 171Z" fill="#788d95" stroke="#353c3a" stroke-width="4"/><path d="M178 117L219 104 233 118 229 164 190 170Z" fill="#788d95" stroke="#353c3a" stroke-width="4"/>
+ <path d="M113 125L188 125 191 195 151 219 110 194Z" fill="#353c3a" stroke="#788d95" stroke-width="5"/>
+ <path d="M113 125L188 125 191 195 151 219 110 194Z" fill="url(#mat2)"/>
+ <path d="M113 89V55L132 46V37H172V46L190 56V89L173 99H131Z M106 57H123M178 57H195" fill="#353c3a" stroke="#788d95" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#87c0df" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M116 182Q152 121 184 182 M127 175Q151 149 173 175 M127 164H174"/><path d='M100 110L79 95M204 110L225 93'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="156" r="8" fill="#87c0df" stroke="#353c3a" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#87c0df" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#87c0df">FRENTE · 03</text>
+ </svg></div><div class="body"><span class="id">Ilha 01 · Chefe</span><h3>Vigia das Pontes</h3><p class="beast">Brontar</p><div class="chips"><span style="background:#353c3a"></span><span style="background:#788d95"></span><span style="background:#87c0df"></span></div><dl><dt>Assinatura</dt><dd>Arcos e vigas</dd><dt>Material-chave</dt><dd>Laje/têxtil</dd><dt>Troféu</dt><dd>Chifre mineral</dd></dl><a href="Ilha_01_Escarpas_Ancestrais.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="1" data-role="Predador" data-query="virdrak veste de casca viva raízes verticais">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Veste de Casca Viva">
+ <defs><radialGradient id="g3"><stop stop-color="#a1a768" stop-opacity=".23"/><stop offset="1" stop-color="#a1a768" stop-opacity="0"/></radialGradient><pattern id="mat3" width="11" height="19" patternUnits="userSpaceOnUse"><path d="M0 0L10 10" fill="none" stroke="#c3d58a" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g3)"/>
+ <g class="silhouette"><path d="M125 192L106 315 142 315 150 255 164 315 196 315 177 193Z" fill="#4f5c36" stroke="#a1a768" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#4f5c36" stroke="#a1a768" stroke-width="5"/>
+ <path d="M128 195L111 244 134 254 147 234 163 255 188 242 171 195Z" fill="#a1a768" stroke="#c3d58a" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M124 121L108 108 93 158 122 165Z" fill="#a1a768" stroke="#4f5c36" stroke-width="4"/><path d="M181 119L194 125 189 146 180 154Z" fill="#a1a768" stroke="#4f5c36" stroke-width="4"/>
+ <path d="M125 127L175 128 179 197 149 208 122 192Z" fill="#4f5c36" stroke="#a1a768" stroke-width="5"/>
+ <path d="M125 127L175 128 179 197 149 208 122 192Z" fill="url(#mat3)"/>
+ <path d="M131 94Q102 55 121 34L144 28 155 40 181 32 184 70 170 94Z M128 42L113 17M168 44L191 25" fill="#4f5c36" stroke="#a1a768" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#c3d58a" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M132 142Q119 167 143 185M160 136Q172 165 149 195"/><path d='M110 205Q83 232 106 254M180 207Q190 227 179 244'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="185" r="6" fill="#c3d58a" stroke="#4f5c36" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#c3d58a" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#c3d58a">FRENTE · 04</text>
+ </svg></div><div class="body"><span class="id">Ilha 02 · Predador</span><h3>Veste de Casca Viva</h3><p class="beast">Virdrak</p><div class="chips"><span style="background:#4f5c36"></span><span style="background:#a1a768"></span><span style="background:#c3d58a"></span></div><dl><dt>Assinatura</dt><dd>Raízes verticais</dd><dt>Material-chave</dt><dd>Casca/linho</dd><dt>Troféu</dt><dd>Bolsa de seiva</dd></dl><a href="Ilha_02_Floresta_Ancestral.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="1" data-role="Predador" data-query="mosskar manto do galheiro galhada e manto">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Manto do Galheiro">
+ <defs><radialGradient id="g4"><stop stop-color="#777451" stop-opacity=".23"/><stop offset="1" stop-color="#777451" stop-opacity="0"/></radialGradient><pattern id="mat4" width="17" height="12" patternUnits="userSpaceOnUse"><path d="M0 5Q8 1 16 5" fill="none" stroke="#c2b691" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g4)"/>
+ <g class="silhouette"><path d="M126 191L115 310 141 310 150 250 165 309 190 309 177 192Z" fill="#494b38" stroke="#777451" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#494b38" stroke="#777451" stroke-width="5"/>
+ <path d="M118 199L108 257 129 252 144 235 158 255 186 249 179 200Z" fill="#777451" stroke="#c2b691" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M123 119Q86 100 71 111Q68 150 115 174Z" fill="#777451" stroke="#494b38" stroke-width="4"/><path d="M178 118L196 122 205 138 189 151Z" fill="#777451" stroke="#494b38" stroke-width="4"/>
+ <path d="M111 122L190 121 201 190 151 218 104 190Z" fill="#494b38" stroke="#777451" stroke-width="5"/>
+ <path d="M111 122L190 121 201 190 151 218 104 190Z" fill="url(#mat4)"/>
+ <path d="M117 87Q97 59 113 39L144 33 174 42 189 68 181 91Z M126 43Q95 25 87 9M173 43Q196 25 198 8" fill="#494b38" stroke="#777451" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#c2b691" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M119 145Q152 131 179 146M128 157Q150 145 170 161"/><path d='M119 117L84 90M182 118L218 94M95 99L89 76'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="185" r="6" fill="#c2b691" stroke="#494b38" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#c2b691" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#c2b691">FRENTE · 05</text>
+ </svg></div><div class="body"><span class="id">Ilha 02 · Predador</span><h3>Manto do Galheiro</h3><p class="beast">Mosskar</p><div class="chips"><span style="background:#494b38"></span><span style="background:#777451"></span><span style="background:#c2b691"></span></div><dl><dt>Assinatura</dt><dd>Galhada e manto</dd><dt>Material-chave</dt><dd>Pelo/musgo</dd><dt>Troféu</dt><dd>Fecho de galhada</dd></dl><a href="Ilha_02_Floresta_Ancestral.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="1" data-role="Chefe" data-query="sylvarok coração da mata anéis de madeira">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Coração da Mata">
+ <defs><radialGradient id="g5"><stop stop-color="#466d4f" stop-opacity=".23"/><stop offset="1" stop-color="#466d4f" stop-opacity="0"/></radialGradient><pattern id="mat5" width="17" height="19" patternUnits="userSpaceOnUse"><path d="M5 0V19" fill="none" stroke="#a5c779" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g5)"/>
+ <g class="silhouette"><path d="M112 196L93 315 132 315 147 255 165 315 205 315 184 196Z" fill="#243a32" stroke="#466d4f" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#243a32" stroke="#466d4f" stroke-width="5"/>
+ <path d="M115 200L92 277 126 291 151 274 181 291 206 277 184 197Z" fill="#466d4f" stroke="#a5c779" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M120 118Q85 95 81 143L116 166Z" fill="#466d4f" stroke="#243a32" stroke-width="4"/><path d="M182 118Q211 90 220 137L192 160Z" fill="#466d4f" stroke="#243a32" stroke-width="4"/>
+ <path d="M109 121Q148 105 191 123L185 202 149 217 117 195Z" fill="#243a32" stroke="#466d4f" stroke-width="5"/>
+ <path d="M109 121Q148 105 191 123L185 202 149 217 117 195Z" fill="url(#mat5)"/>
+ <path d="M111 85L118 49 145 28 175 45 188 84 172 97H128Z M118 54Q117 12 145 19M178 55Q190 16 166 20" fill="#243a32" stroke="#466d4f" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#a5c779" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M116 170Q151 133 186 170M116 186Q151 152 186 186M124 200H174"/><path d='M116 121Q148 98 190 124'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="156" r="8" fill="#a5c779" stroke="#243a32" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#a5c779" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#a5c779">FRENTE · 06</text>
+ </svg></div><div class="body"><span class="id">Ilha 02 · Chefe</span><h3>Coração da Mata</h3><p class="beast">Sylvarok</p><div class="chips"><span style="background:#243a32"></span><span style="background:#466d4f"></span><span style="background:#a5c779"></span></div><dl><dt>Assinatura</dt><dd>Anéis de madeira</dd><dt>Material-chave</dt><dd>Tronco/folhas</dd><dt>Troféu</dt><dd>Essência verde</dd></dl><a href="Ilha_02_Floresta_Ancestral.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="2" data-role="Predador" data-query="aeronox traje do rasante penas de voo">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Traje do Rasante">
+ <defs><radialGradient id="g6"><stop stop-color="#bca884" stop-opacity=".23"/><stop offset="1" stop-color="#bca884" stop-opacity="0"/></radialGradient><pattern id="mat6" width="11" height="19" patternUnits="userSpaceOnUse"><path d="M0 0L10 10" fill="none" stroke="#e9dbba" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g6)"/>
+ <g class="silhouette"><path d="M125 192L106 315 142 315 150 255 164 315 196 315 177 193Z" fill="#304956" stroke="#bca884" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#304956" stroke="#bca884" stroke-width="5"/>
+ <path d="M128 195L111 244 134 254 147 234 163 255 188 242 171 195Z" fill="#bca884" stroke="#e9dbba" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M119 121L67 114 74 145 117 154Z" fill="#bca884" stroke="#304956" stroke-width="4"/><path d="M184 121L206 116 208 137 191 144Z" fill="#bca884" stroke="#304956" stroke-width="4"/>
+ <path d="M123 125L177 126 180 190 155 204 116 187Z" fill="#304956" stroke="#bca884" stroke-width="5"/>
+ <path d="M123 125L177 126 180 190 155 204 116 187Z" fill="url(#mat6)"/>
+ <path d="M124 83L114 57 134 39 161 33 184 59 177 88 147 99Z M148 74L181 74 196 82 164 89Z" fill="#304956" stroke="#bca884" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#e9dbba" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M119 141L170 188M122 158L157 198M138 137L178 173"/><path d='M113 130L79 110L67 129L107 158'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="185" r="6" fill="#e9dbba" stroke="#304956" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#e9dbba" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#e9dbba">FRENTE · 07</text>
+ </svg></div><div class="body"><span class="id">Ilha 03 · Predador</span><h3>Traje do Rasante</h3><p class="beast">Aeronox</p><div class="chips"><span style="background:#304956"></span><span style="background:#bca884"></span><span style="background:#e9dbba"></span></div><dl><dt>Assinatura</dt><dd>Penas de voo</dd><dt>Material-chave</dt><dd>Couro/penas</dd><dt>Troféu</dt><dd>Garra de peito</dd></dl><a href="Ilha_03_Planicies_dos_Ventos.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="2" data-role="Predador" data-query="valcron veste do corredor chevron e velocidade">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Veste do Corredor">
+ <defs><radialGradient id="g7"><stop stop-color="#7b9e91" stop-opacity=".23"/><stop offset="1" stop-color="#7b9e91" stop-opacity="0"/></radialGradient><pattern id="mat7" width="17" height="12" patternUnits="userSpaceOnUse"><path d="M0 5Q8 1 16 5" fill="none" stroke="#e2c17c" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g7)"/>
+ <g class="silhouette"><path d="M126 191L115 310 141 310 150 250 165 309 190 309 177 192Z" fill="#3c514c" stroke="#7b9e91" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#3c514c" stroke="#7b9e91" stroke-width="5"/>
+ <path d="M118 199L108 257 129 252 144 235 158 255 186 249 179 200Z" fill="#7b9e91" stroke="#e2c17c" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M121 124L103 119 100 149 122 154Z" fill="#7b9e91" stroke="#3c514c" stroke-width="4"/><path d="M182 124L199 119 201 149 183 152Z" fill="#7b9e91" stroke="#3c514c" stroke-width="4"/>
+ <path d="M127 127L175 126 171 195 148 212 130 197Z" fill="#3c514c" stroke="#7b9e91" stroke-width="5"/>
+ <path d="M127 127L175 126 171 195 148 212 130 197Z" fill="url(#mat7)"/>
+ <path d="M121 80Q119 41 144 40L169 38 181 80 171 90H131Z M111 64H189" fill="#3c514c" stroke="#7b9e91" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#e2c17c" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M126 140L171 157 134 175 169 193M129 151L163 165"/><path d='M129 198L114 246M174 197L184 245'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="185" r="6" fill="#e2c17c" stroke="#3c514c" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#e2c17c" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#e2c17c">FRENTE · 08</text>
+ </svg></div><div class="body"><span class="id">Ilha 03 · Predador</span><h3>Veste do Corredor</h3><p class="beast">Valcron</p><div class="chips"><span style="background:#3c514c"></span><span style="background:#7b9e91"></span><span style="background:#e2c17c"></span></div><dl><dt>Assinatura</dt><dd>Chevron e velocidade</dd><dt>Material-chave</dt><dd>Escamas/membrana</dd><dt>Troféu</dt><dd>Esporas de vento</dd></dl><a href="Ilha_03_Planicies_dos_Ventos.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="2" data-role="Chefe" data-query="torvak sentinela dos ventos leque de plumas">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Sentinela dos Ventos">
+ <defs><radialGradient id="g8"><stop stop-color="#8d9ba8" stop-opacity=".23"/><stop offset="1" stop-color="#8d9ba8" stop-opacity="0"/></radialGradient><pattern id="mat8" width="17" height="19" patternUnits="userSpaceOnUse"><path d="M5 0V19" fill="none" stroke="#dedbb2" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g8)"/>
+ <g class="silhouette"><path d="M112 196L93 315 132 315 147 255 165 315 205 315 184 196Z" fill="#34455f" stroke="#8d9ba8" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#34455f" stroke="#8d9ba8" stroke-width="5"/>
+ <path d="M115 200L92 277 126 291 151 274 181 291 206 277 184 197Z" fill="#8d9ba8" stroke="#dedbb2" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M117 117L67 82 81 132 117 164Z" fill="#8d9ba8" stroke="#34455f" stroke-width="4"/><path d="M186 121L202 117 206 136 188 155Z" fill="#8d9ba8" stroke="#34455f" stroke-width="4"/>
+ <path d="M109 124L189 120 184 186 144 216 113 193Z" fill="#34455f" stroke="#8d9ba8" stroke-width="5"/>
+ <path d="M109 124L189 120 184 186 144 216 113 193Z" fill="url(#mat8)"/>
+ <path d="M122 91L118 53 148 30 181 51 179 89Z M147 35L150 5M130 42L114 18M170 44L185 19" fill="#34455f" stroke="#8d9ba8" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#dedbb2" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M114 159L142 132 154 157 186 143 M111 177L142 148 161 183"/><path d='M74 105L54 89M82 117L54 112M84 136L55 137'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="156" r="8" fill="#dedbb2" stroke="#34455f" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#dedbb2" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#dedbb2">FRENTE · 09</text>
+ </svg></div><div class="body"><span class="id">Ilha 03 · Chefe</span><h3>Sentinela dos Ventos</h3><p class="beast">Torvak</p><div class="chips"><span style="background:#34455f"></span><span style="background:#8d9ba8"></span><span style="background:#dedbb2"></span></div><dl><dt>Assinatura</dt><dd>Leque de plumas</dd><dt>Material-chave</dt><dd>Plumas/osso</dd><dt>Troféu</dt><dd>Pena da tempestade</dd></dl><a href="Ilha_03_Planicies_dos_Ventos.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="3" data-role="Predador" data-query="prismakar escama prismática losangos refratados">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Escama Prismática">
+ <defs><radialGradient id="g9"><stop stop-color="#72b4b0" stop-opacity=".23"/><stop offset="1" stop-color="#72b4b0" stop-opacity="0"/></radialGradient><pattern id="mat9" width="11" height="19" patternUnits="userSpaceOnUse"><path d="M0 0L10 10" fill="none" stroke="#e6a9d6" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g9)"/>
+ <g class="silhouette"><path d="M125 192L106 315 142 315 150 255 164 315 196 315 177 193Z" fill="#273b4f" stroke="#72b4b0" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#273b4f" stroke="#72b4b0" stroke-width="5"/>
+ <path d="M128 195L111 244 134 254 147 234 163 255 188 242 171 195Z" fill="#72b4b0" stroke="#e6a9d6" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M118 119L88 113 76 134 111 156Z" fill="#72b4b0" stroke="#273b4f" stroke-width="4"/><path d="M181 118L211 109 220 139 188 158Z" fill="#72b4b0" stroke="#273b4f" stroke-width="4"/>
+ <path d="M122 121L179 123 187 190 147 210 117 189Z" fill="#273b4f" stroke="#72b4b0" stroke-width="5"/>
+ <path d="M122 121L179 123 187 190 147 210 117 189Z" fill="url(#mat9)"/>
+ <path d="M124 94L118 52 135 38 150 43 166 31 182 60 176 94Z M136 42L145 16 160 31" fill="#273b4f" stroke="#72b4b0" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#e6a9d6" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M149 136L167 157 149 177 130 158Z M149 183L159 193 149 203 139 193Z"/><path d='M115 143L139 119L167 131'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="185" r="6" fill="#e6a9d6" stroke="#273b4f" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#e6a9d6" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#e6a9d6">FRENTE · 10</text>
+ </svg></div><div class="body"><span class="id">Ilha 04 · Predador</span><h3>Escama Prismática</h3><p class="beast">Prismakar</p><div class="chips"><span style="background:#273b4f"></span><span style="background:#72b4b0"></span><span style="background:#e6a9d6"></span></div><dl><dt>Assinatura</dt><dd>Losangos refratados</dd><dt>Material-chave</dt><dd>Microescamas</dd><dt>Troféu</dt><dd>Fragmento no esterno</dd></dl><a href="Ilha_04_Vale_Cristalino.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="3" data-role="Predador" data-query="obelkar traje do cristal negro fratura obsidiana">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Traje do Cristal Negro">
+ <defs><radialGradient id="g10"><stop stop-color="#4c526d" stop-opacity=".23"/><stop offset="1" stop-color="#4c526d" stop-opacity="0"/></radialGradient><pattern id="mat10" width="17" height="12" patternUnits="userSpaceOnUse"><path d="M0 5Q8 1 16 5" fill="none" stroke="#9b7bcb" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g10)"/>
+ <g class="silhouette"><path d="M126 191L115 310 141 310 150 250 165 309 190 309 177 192Z" fill="#161b2e" stroke="#4c526d" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#161b2e" stroke="#4c526d" stroke-width="5"/>
+ <path d="M118 199L108 257 129 252 144 235 158 255 186 249 179 200Z" fill="#4c526d" stroke="#9b7bcb" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M119 114L82 103 63 143 111 163Z" fill="#4c526d" stroke="#161b2e" stroke-width="4"/><path d="M181 120L220 111 229 135 192 165Z" fill="#4c526d" stroke="#161b2e" stroke-width="4"/>
+ <path d="M117 123L190 129 175 201 140 215 110 189Z" fill="#161b2e" stroke="#4c526d" stroke-width="5"/>
+ <path d="M117 123L190 129 175 201 140 215 110 189Z" fill="url(#mat10)"/>
+ <path d="M120 92L120 51 135 31 180 43 181 81 165 100Z M180 44L204 24 196 63" fill="#161b2e" stroke="#4c526d" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#9b7bcb" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M120 140L162 135 172 152 139 160Z M124 173L154 163 182 180"/><path d='M119 185L108 213M190 167L209 203'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="185" r="6" fill="#9b7bcb" stroke="#161b2e" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#9b7bcb" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#9b7bcb">FRENTE · 11</text>
+ </svg></div><div class="body"><span class="id">Ilha 04 · Predador</span><h3>Traje do Cristal Negro</h3><p class="beast">Obelkar</p><div class="chips"><span style="background:#161b2e"></span><span style="background:#4c526d"></span><span style="background:#9b7bcb"></span></div><dl><dt>Assinatura</dt><dd>Fratura obsidiana</dd><dt>Material-chave</dt><dd>Obsidiana/basalto</dd><dt>Troféu</dt><dd>Chifre gemado</dd></dl><a href="Ilha_04_Vale_Cristalino.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="3" data-role="Chefe" data-query="krysalor guarda-prisma halo mineral">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Guarda-Prisma">
+ <defs><radialGradient id="g11"><stop stop-color="#b8cce2" stop-opacity=".23"/><stop offset="1" stop-color="#b8cce2" stop-opacity="0"/></radialGradient><pattern id="mat11" width="17" height="19" patternUnits="userSpaceOnUse"><path d="M5 0V19" fill="none" stroke="#78e2e0" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g11)"/>
+ <g class="silhouette"><path d="M112 196L93 315 132 315 147 255 165 315 205 315 184 196Z" fill="#39466e" stroke="#b8cce2" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#39466e" stroke="#b8cce2" stroke-width="5"/>
+ <path d="M115 200L92 277 126 291 151 274 181 291 206 277 184 197Z" fill="#b8cce2" stroke="#78e2e0" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M119 125L87 119 74 130 94 152 122 150Z" fill="#b8cce2" stroke="#39466e" stroke-width="4"/><path d="M181 124L211 117 223 131 199 151 180 149Z" fill="#b8cce2" stroke="#39466e" stroke-width="4"/>
+ <path d="M121 122L180 120 182 194 151 208 119 194Z" fill="#39466e" stroke="#b8cce2" stroke-width="5"/>
+ <path d="M121 122L180 120 182 194 151 208 119 194Z" fill="url(#mat11)"/>
+ <path d="M125 91L121 60 141 43 166 39 181 64 175 92Z M114 56L124 24 139 36 151 14 167 35 183 18 191 60" fill="#39466e" stroke="#b8cce2" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#78e2e0" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M149 130L165 149 149 165 133 149Z M149 171L163 187 149 202 136 187Z"/><path d='M109 125L94 109M190 126L208 108'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="156" r="8" fill="#78e2e0" stroke="#39466e" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#78e2e0" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#78e2e0">FRENTE · 12</text>
+ </svg></div><div class="body"><span class="id">Ilha 04 · Chefe</span><h3>Guarda-Prisma</h3><p class="beast">Krysalor</p><div class="chips"><span style="background:#39466e"></span><span style="background:#b8cce2"></span><span style="background:#78e2e0"></span></div><dl><dt>Assinatura</dt><dd>Halo mineral</dd><dt>Material-chave</dt><dd>Cristal/tecido</dd><dt>Troféu</dt><dd>Coroa prismal</dd></dl><a href="Ilha_04_Vale_Cristalino.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="4" data-role="Predador" data-query="magrath veste das cinzas costuras de cobre">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Veste das Cinzas">
+ <defs><radialGradient id="g12"><stop stop-color="#9c654f" stop-opacity=".23"/><stop offset="1" stop-color="#9c654f" stop-opacity="0"/></radialGradient><pattern id="mat12" width="11" height="19" patternUnits="userSpaceOnUse"><path d="M0 0L10 10" fill="none" stroke="#f38c58" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g12)"/>
+ <g class="silhouette"><path d="M125 192L106 315 142 315 150 255 164 315 196 315 177 193Z" fill="#312724" stroke="#9c654f" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#312724" stroke="#9c654f" stroke-width="5"/>
+ <path d="M128 195L111 244 134 254 147 234 163 255 188 242 171 195Z" fill="#9c654f" stroke="#f38c58" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M119 117L96 105 78 154 117 162Z" fill="#9c654f" stroke="#312724" stroke-width="4"/><path d="M182 120L196 115 207 148 183 156Z" fill="#9c654f" stroke="#312724" stroke-width="4"/>
+ <path d="M124 129L171 126 184 186 151 208 119 187Z" fill="#312724" stroke="#9c654f" stroke-width="5"/>
+ <path d="M124 129L171 126 184 186 151 208 119 187Z" fill="url(#mat12)"/>
+ <path d="M114 91Q107 50 127 31L164 31 189 72 174 101H127Z M120 76H180" fill="#312724" stroke="#9c654f" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#f38c58" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M123 140L174 178M127 159L162 191 M142 137L177 170"/><path d='M117 192L103 236L126 250'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="185" r="6" fill="#f38c58" stroke="#312724" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#f38c58" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#f38c58">FRENTE · 13</text>
+ </svg></div><div class="body"><span class="id">Ilha 05 · Predador</span><h3>Veste das Cinzas</h3><p class="beast">Magrath</p><div class="chips"><span style="background:#312724"></span><span style="background:#9c654f"></span><span style="background:#f38c58"></span></div><dl><dt>Assinatura</dt><dd>Costuras de cobre</dd><dt>Material-chave</dt><dd>Couro carbonizado</dd><dt>Troféu</dt><dd>Cilindro de brasa</dd></dl><a href="Ilha_05_Terras_Devastadas.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="4" data-role="Predador" data-query="vulkron escama da caldeira escamas em telhas">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Escama da Caldeira">
+ <defs><radialGradient id="g13"><stop stop-color="#9b5034" stop-opacity=".23"/><stop offset="1" stop-color="#9b5034" stop-opacity="0"/></radialGradient><pattern id="mat13" width="17" height="12" patternUnits="userSpaceOnUse"><path d="M0 5Q8 1 16 5" fill="none" stroke="#ffc064" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g13)"/>
+ <g class="silhouette"><path d="M126 191L115 310 141 310 150 250 165 309 190 309 177 192Z" fill="#352e31" stroke="#9b5034" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#352e31" stroke="#9b5034" stroke-width="5"/>
+ <path d="M118 199L108 257 129 252 144 235 158 255 186 249 179 200Z" fill="#9b5034" stroke="#ffc064" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M117 118L76 112 73 147 106 168Z" fill="#9b5034" stroke="#352e31" stroke-width="4"/><path d="M182 117L217 110 227 151 190 166Z" fill="#9b5034" stroke="#352e31" stroke-width="4"/>
+ <path d="M116 128L188 127 186 195 149 211 113 189Z" fill="#352e31" stroke="#9b5034" stroke-width="5"/>
+ <path d="M116 128L188 127 186 195 149 211 113 189Z" fill="url(#mat13)"/>
+ <path d="M120 92L122 58 140 38 164 39 182 62 178 91Z M123 65L107 52M176 66L194 53" fill="#352e31" stroke="#9b5034" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#ffc064" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M122 141H181M125 157H180M126 174H181M132 192H173"/><path d='M120 125L104 145L122 161M180 125L199 146L180 162'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="185" r="6" fill="#ffc064" stroke="#352e31" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#ffc064" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#ffc064">FRENTE · 14</text>
+ </svg></div><div class="body"><span class="id">Ilha 05 · Predador</span><h3>Escama da Caldeira</h3><p class="beast">Vulkron</p><div class="chips"><span style="background:#352e31"></span><span style="background:#9b5034"></span><span style="background:#ffc064"></span></div><dl><dt>Assinatura</dt><dd>Escamas em telhas</dd><dt>Material-chave</dt><dd>Basalto/escama</dd><dt>Troféu</dt><dd>Presa ígnea</dd></dl><a href="Ilha_05_Terras_Devastadas.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="4" data-role="Chefe" data-query="volkaron mandíbula rubra mandíbula angular">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Mandíbula Rubra">
+ <defs><radialGradient id="g14"><stop stop-color="#ba3e37" stop-opacity=".23"/><stop offset="1" stop-color="#ba3e37" stop-opacity="0"/></radialGradient><pattern id="mat14" width="17" height="19" patternUnits="userSpaceOnUse"><path d="M5 0V19" fill="none" stroke="#f2bd6b" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g14)"/>
+ <g class="silhouette"><path d="M112 196L93 315 132 315 147 255 165 315 205 315 184 196Z" fill="#422224" stroke="#ba3e37" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#422224" stroke="#ba3e37" stroke-width="5"/>
+ <path d="M115 200L92 277 126 291 151 274 181 291 206 277 184 197Z" fill="#ba3e37" stroke="#f2bd6b" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M117 115L72 99 60 152 111 171Z" fill="#ba3e37" stroke="#422224" stroke-width="4"/><path d="M182 115L218 99 239 152 189 170Z" fill="#ba3e37" stroke="#422224" stroke-width="4"/>
+ <path d="M114 120L190 120 190 196 150 221 110 192Z" fill="#422224" stroke="#ba3e37" stroke-width="5"/>
+ <path d="M114 120L190 120 190 196 150 221 110 192Z" fill="url(#mat14)"/>
+ <path d="M112 91L119 49 138 35 171 37 187 57 181 93Z M118 47L112 20 135 35 M174 39L187 19 187 53" fill="#422224" stroke="#ba3e37" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#f2bd6b" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M119 140L146 155 174 138M119 159L150 174 181 159M128 182L150 201 177 182"/><path d='M115 179L136 188L152 175L171 188L186 178'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="156" r="8" fill="#f2bd6b" stroke="#422224" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#f2bd6b" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#f2bd6b">FRENTE · 15</text>
+ </svg></div><div class="body"><span class="id">Ilha 05 · Chefe</span><h3>Mandíbula Rubra</h3><p class="beast">Volkaron</p><div class="chips"><span style="background:#422224"></span><span style="background:#ba3e37"></span><span style="background:#f2bd6b"></span></div><dl><dt>Assinatura</dt><dd>Mandíbula angular</dd><dt>Material-chave</dt><dd>Metal/couraça</dd><dt>Troféu</dt><dd>Coração protegido</dd></dl><a href="Ilha_05_Terras_Devastadas.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="5" data-role="Predador" data-query="cryvon manto invernal garras e cachecol">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Manto Invernal">
+ <defs><radialGradient id="g15"><stop stop-color="#a9c9cd" stop-opacity=".23"/><stop offset="1" stop-color="#a9c9cd" stop-opacity="0"/></radialGradient><pattern id="mat15" width="11" height="19" patternUnits="userSpaceOnUse"><path d="M0 0L10 10" fill="none" stroke="#f0e8db" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g15)"/>
+ <g class="silhouette"><path d="M125 192L106 315 142 315 150 255 164 315 196 315 177 193Z" fill="#485e75" stroke="#a9c9cd" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#485e75" stroke="#a9c9cd" stroke-width="5"/>
+ <path d="M128 195L111 244 134 254 147 234 163 255 188 242 171 195Z" fill="#a9c9cd" stroke="#f0e8db" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M119 122Q98 101 82 136L120 160Z" fill="#a9c9cd" stroke="#485e75" stroke-width="4"/><path d="M183 123L196 125 204 155 184 154Z" fill="#a9c9cd" stroke="#485e75" stroke-width="4"/>
+ <path d="M121 121L180 124 185 190 151 208 118 188Z" fill="#485e75" stroke="#a9c9cd" stroke-width="5"/>
+ <path d="M121 121L180 124 185 190 151 208 118 188Z" fill="url(#mat15)"/>
+ <path d="M112 90Q106 31 152 28Q191 38 189 89L173 102 124 102Z M108 71Q149 86 190 70" fill="#485e75" stroke="#a9c9cd" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#f0e8db" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M120 155Q151 133 180 157 M121 170L173 183"/><path d='M112 105L99 134M184 106L208 133'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="185" r="6" fill="#f0e8db" stroke="#485e75" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#f0e8db" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#f0e8db">FRENTE · 16</text>
+ </svg></div><div class="body"><span class="id">Ilha 06 · Predador</span><h3>Manto Invernal</h3><p class="beast">Cryvon</p><div class="chips"><span style="background:#485e75"></span><span style="background:#a9c9cd"></span><span style="background:#f0e8db"></span></div><dl><dt>Assinatura</dt><dd>Garras e cachecol</dd><dt>Material-chave</dt><dd>Pelo/tecido</dd><dt>Troféu</dt><dd>Garra de gelo</dd></dl><a href="Ilha_06_Reino_da_Geada.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="5" data-role="Predador" data-query="hrimor guarda do inverno peles e presas">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Guarda do Inverno">
+ <defs><radialGradient id="g16"><stop stop-color="#958d81" stop-opacity=".23"/><stop offset="1" stop-color="#958d81" stop-opacity="0"/></radialGradient><pattern id="mat16" width="17" height="12" patternUnits="userSpaceOnUse"><path d="M0 5Q8 1 16 5" fill="none" stroke="#e0d4ba" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g16)"/>
+ <g class="silhouette"><path d="M126 191L115 310 141 310 150 250 165 309 190 309 177 192Z" fill="#3b5065" stroke="#958d81" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#3b5065" stroke="#958d81" stroke-width="5"/>
+ <path d="M118 199L108 257 129 252 144 235 158 255 186 249 179 200Z" fill="#958d81" stroke="#e0d4ba" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M116 118Q86 88 64 131L77 163 114 164Z" fill="#958d81" stroke="#3b5065" stroke-width="4"/><path d="M186 116Q216 89 238 132L223 161 188 168Z" fill="#958d81" stroke="#3b5065" stroke-width="4"/>
+ <path d="M110 125Q149 105 192 126L199 199 149 221 101 199Z" fill="#3b5065" stroke="#958d81" stroke-width="5"/>
+ <path d="M110 125Q149 105 192 126L199 199 149 221 101 199Z" fill="url(#mat16)"/>
+ <path d="M109 93Q107 39 139 29L178 39 194 75 180 100H121Z M118 55L98 31M180 51L204 28" fill="#3b5065" stroke="#958d81" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#e0d4ba" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M122 138Q151 121 177 141 M120 160Q151 144 183 167"/><path d='M91 116Q153 82 219 119'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="185" r="6" fill="#e0d4ba" stroke="#3b5065" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#e0d4ba" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#e0d4ba">FRENTE · 17</text>
+ </svg></div><div class="body"><span class="id">Ilha 06 · Predador</span><h3>Guarda do Inverno</h3><p class="beast">Hrimor</p><div class="chips"><span style="background:#3b5065"></span><span style="background:#958d81"></span><span style="background:#e0d4ba"></span></div><dl><dt>Assinatura</dt><dd>Peles e presas</dd><dt>Material-chave</dt><dd>Couro/pelagem</dd><dt>Troféu</dt><dd>Presa de geada</dd></dl><a href="Ilha_06_Reino_da_Geada.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="5" data-role="Chefe" data-query="gelmorath trono de geada coroa de cinco lâminas">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Trono de Geada">
+ <defs><radialGradient id="g17"><stop stop-color="#e6e8dc" stop-opacity=".23"/><stop offset="1" stop-color="#e6e8dc" stop-opacity="0"/></radialGradient><pattern id="mat17" width="17" height="19" patternUnits="userSpaceOnUse"><path d="M5 0V19" fill="none" stroke="#9edee9" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g17)"/>
+ <g class="silhouette"><path d="M112 196L93 315 132 315 147 255 165 315 205 315 184 196Z" fill="#536b94" stroke="#e6e8dc" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#536b94" stroke="#e6e8dc" stroke-width="5"/>
+ <path d="M115 200L92 277 126 291 151 274 181 291 206 277 184 197Z" fill="#e6e8dc" stroke="#9edee9" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M115 116L79 96 61 133 112 173Z" fill="#e6e8dc" stroke="#536b94" stroke-width="4"/><path d="M183 116L220 96 237 132 189 172Z" fill="#e6e8dc" stroke="#536b94" stroke-width="4"/>
+ <path d="M118 123L181 122 190 196 151 217 110 196Z" fill="#536b94" stroke="#e6e8dc" stroke-width="5"/>
+ <path d="M118 123L181 122 190 196 151 217 110 196Z" fill="url(#mat17)"/>
+ <path d="M117 97L117 55 133 35 166 35 185 55 182 96Z M115 50L117 24 131 35 141 12 154 35 167 11 179 37 190 21 192 54" fill="#536b94" stroke="#e6e8dc" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#9edee9" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M147 128L161 149 147 169 133 149Z M149 172L163 192 149 205 136 190Z"/><path d='M114 121L103 94M189 120L199 94'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="156" r="8" fill="#9edee9" stroke="#536b94" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#9edee9" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#9edee9">FRENTE · 18</text>
+ </svg></div><div class="body"><span class="id">Ilha 06 · Chefe</span><h3>Trono de Geada</h3><p class="beast">Gelmorath</p><div class="chips"><span style="background:#536b94"></span><span style="background:#e6e8dc"></span><span style="background:#9edee9"></span></div><dl><dt>Assinatura</dt><dd>Coroa de cinco lâminas</dd><dt>Material-chave</dt><dd>Rocha/gelo fosco</dd><dt>Troféu</dt><dd>Essência glacial</dd></dl><a href="Ilha_06_Reino_da_Geada.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="6" data-role="Predador" data-query="umbryon penas do eclipse asa unilateral">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Penas do Eclipse">
+ <defs><radialGradient id="g18"><stop stop-color="#676776" stop-opacity=".23"/><stop offset="1" stop-color="#676776" stop-opacity="0"/></radialGradient><pattern id="mat18" width="11" height="19" patternUnits="userSpaceOnUse"><path d="M0 0L10 10" fill="none" stroke="#9a76c8" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g18)"/>
+ <g class="silhouette"><path d="M125 192L106 315 142 315 150 255 164 315 196 315 177 193Z" fill="#191c2b" stroke="#676776" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#191c2b" stroke="#676776" stroke-width="5"/>
+ <path d="M128 195L111 244 134 254 147 234 163 255 188 242 171 195Z" fill="#676776" stroke="#9a76c8" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M117 125L67 103 70 162 118 174Z" fill="#676776" stroke="#191c2b" stroke-width="4"/><path d="M183 121L202 119 202 149 186 161Z" fill="#676776" stroke="#191c2b" stroke-width="4"/>
+ <path d="M123 121L177 127 179 186 152 212 114 190Z" fill="#191c2b" stroke="#676776" stroke-width="5"/>
+ <path d="M123 121L177 127 179 186 152 212 114 190Z" fill="url(#mat18)"/>
+ <path d="M115 94Q111 43 150 32Q183 44 187 91L165 103 128 103Z M155 86L197 89 162 99Z" fill="#191c2b" stroke="#676776" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#9a76c8" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M121 147L168 179M133 136L177 164M120 168L156 195"/><path d='M111 124L61 90L72 130L105 158'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="185" r="6" fill="#9a76c8" stroke="#191c2b" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#9a76c8" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#9a76c8">FRENTE · 19</text>
+ </svg></div><div class="body"><span class="id">Ilha 07 · Predador</span><h3>Penas do Eclipse</h3><p class="beast">Umbryon</p><div class="chips"><span style="background:#191c2b"></span><span style="background:#676776"></span><span style="background:#9a76c8"></span></div><dl><dt>Assinatura</dt><dd>Asa unilateral</dd><dt>Material-chave</dt><dd>Couro/penas</dd><dt>Troféu</dt><dd>Bico umbral</dd></dl><a href="Ilha_07_Abismo_Estelar.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="6" data-role="Predador" data-query="nethrakar couro do vazio nervuras e carapaça">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Couro do Vazio">
+ <defs><radialGradient id="g19"><stop stop-color="#607575" stop-opacity=".23"/><stop offset="1" stop-color="#607575" stop-opacity="0"/></radialGradient><pattern id="mat19" width="17" height="12" patternUnits="userSpaceOnUse"><path d="M0 5Q8 1 16 5" fill="none" stroke="#c984be" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g19)"/>
+ <g class="silhouette"><path d="M126 191L115 310 141 310 150 250 165 309 190 309 177 192Z" fill="#1a2130" stroke="#607575" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#1a2130" stroke="#607575" stroke-width="5"/>
+ <path d="M118 199L108 257 129 252 144 235 158 255 186 249 179 200Z" fill="#607575" stroke="#c984be" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M122 124L111 118 107 143 121 155Z" fill="#607575" stroke="#1a2130" stroke-width="4"/><path d="M180 123L205 113 219 146 185 163Z" fill="#607575" stroke="#1a2130" stroke-width="4"/>
+ <path d="M129 121L170 123 176 197 151 209 125 197Z" fill="#1a2130" stroke="#607575" stroke-width="5"/>
+ <path d="M129 121L170 123 176 197 151 209 125 197Z" fill="url(#mat19)"/>
+ <path d="M122 96L120 51 141 37 167 33 179 54 177 95Z M135 58L157 55 175 67" fill="#1a2130" stroke="#607575" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#c984be" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M135 137Q153 151 163 137M136 155Q154 169 163 155M136 175Q155 190 162 174"/><path d='M116 140L104 176L119 210M187 140L203 176L182 210'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="185" r="6" fill="#c984be" stroke="#1a2130" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#c984be" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#c984be">FRENTE · 20</text>
+ </svg></div><div class="body"><span class="id">Ilha 07 · Predador</span><h3>Couro do Vazio</h3><p class="beast">Nethrakar</p><div class="chips"><span style="background:#1a2130"></span><span style="background:#607575"></span><span style="background:#c984be"></span></div><dl><dt>Assinatura</dt><dd>Nervuras e carapaça</dd><dt>Material-chave</dt><dd>Carapaça/couro</dd><dt>Troféu</dt><dd>Cápsula gravitacional</dd></dl><a href="Ilha_07_Abismo_Estelar.html">Ver catálogo completo da ilha</a></div></article>
+<article class="card" data-island="6" data-role="Chefe" data-query="noxaryon ecos do abismo órbitas e costelas">
+<div class="portrait"><svg viewBox="0 0 300 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estudo 2D frontal da silhueta Ecos do Abismo">
+ <defs><radialGradient id="g20"><stop stop-color="#a293b8" stop-opacity=".23"/><stop offset="1" stop-color="#a293b8" stop-opacity="0"/></radialGradient><pattern id="mat20" width="17" height="19" patternUnits="userSpaceOnUse"><path d="M5 0V19" fill="none" stroke="#dac7ef" stroke-opacity=".18"/></pattern></defs>
+ <rect width="300" height="356" rx="15" fill="#101820"/><circle cx="150" cy="172" r="151" fill="url(#g20)"/>
+ <g class="silhouette"><path d="M112 196L93 315 132 315 147 255 165 315 205 315 184 196Z" fill="#212034" stroke="#a293b8" stroke-width="4"/>
+ <path d="M113 126L91 172 80 237 104 247 126 183 M185 128L207 169 221 237 198 247 172 182" fill="#212034" stroke="#a293b8" stroke-width="5"/>
+ <path d="M110 202L104 300 147 279 174 305 196 205Z" fill="#a293b8" stroke="#dac7ef" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M115 118L90 105 74 168 120 176Z" fill="#a293b8" stroke="#212034" stroke-width="4"/><path d="M180 115L215 107 224 158 186 177Z" fill="#a293b8" stroke="#212034" stroke-width="4"/>
+ <path d="M122 122Q150 109 180 122L190 203 153 218 113 207Z" fill="#212034" stroke="#a293b8" stroke-width="5"/>
+ <path d="M122 122Q150 109 180 122L190 203 153 218 113 207Z" fill="url(#mat20)"/>
+ <path d="M121 96L118 52 145 26 175 42 181 91 164 103 129 102Z M120 55Q149 30 180 58" fill="#212034" stroke="#a293b8" stroke-width="4" stroke-linejoin="round"/>
+ </g>
+ <g class="engrave" stroke="#dac7ef" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M121 155Q150 125 178 156M124 170Q150 141 179 169M129 187Q151 155 174 188"/><path d='M107 193L99 225M195 193L208 235'/><path d="M129 76H170"/></g>
+ <g class="core"><circle cx="150" cy="156" r="8" fill="#dac7ef" stroke="#212034" stroke-width="4"/></g>
+ <path d="M31 335H269M26 27H89" stroke="#dac7ef" stroke-opacity=".25"/><text x="22" y="22" font-size="10" font-weight="800" letter-spacing="2" fill="#dac7ef">FRENTE · 21</text>
+ </svg></div><div class="body"><span class="id">Ilha 07 · Chefe</span><h3>Ecos do Abismo</h3><p class="beast">Noxaryon</p><div class="chips"><span style="background:#212034"></span><span style="background:#a293b8"></span><span style="background:#dac7ef"></span></div><dl><dt>Assinatura</dt><dd>Órbitas e costelas</dd><dt>Material-chave</dt><dd>Tecido/ossos</dd><dt>Troféu</dt><dd>Essência do vazio</dd></dl><a href="Ilha_07_Abismo_Estelar.html">Ver catálogo completo da ilha</a></div></article></div>
+<p id="empty" hidden>Nenhuma armadura encontrada para esses filtros.</p>
+</main><footer>Projeto original de caça e exploração no Roblox · direção de arte conceitual · HTML offline e sem dependências externas. Não foram alterados os 7 catálogos históricos.</footer>
+<script>
+const q=document.getElementById('q'), isle=document.getElementById('isle'), role=document.getElementById('role'), count=document.getElementById('count');
+const cards=[...document.querySelectorAll('.card')];
+function filter(){let n=0;const v=q.value.trim().toLocaleLowerCase('pt-BR');for(const c of cards){const match=(isle.value==='all'||c.dataset.island===isle.value)&&(role.value==='all'||c.dataset.role===role.value)&&c.dataset.query.includes(v);c.hidden=!match;if(match)n++;}count.textContent=n+' de 21 conjuntos';document.getElementById('empty').hidden=n!==0;}
+[q,isle,role].forEach(el=>el.addEventListener(el===q?'input':'change',filter));
+document.getElementById('sil').addEventListener('click',e=>{const btn=e.currentTarget,press=btn.getAttribute('aria-pressed')!=='true';btn.setAttribute('aria-pressed',String(press));document.body.classList.toggle('silhouette-mode',press);btn.textContent=press?'Mostrar cores e detalhes':'Silhuetas em preto';});
+</script></body></html>
