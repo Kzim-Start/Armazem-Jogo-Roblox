@@ -63,6 +63,8 @@ A direção de arte busca um visual **estilizado, de inspiração fantástica, c
 - **Geração e edição de imagens:** estudos visuais, concept art e referências de modelagem.
 - **GitHub:** organização e documentação da evolução do projeto.
 
+**Pendências visuais documentadas:** [Checklist de auditoria de imagens, 21 criaturas, armaduras e sete mapas](docs/AUDITORIA_VISUAL_7_ILHAS.md). A inspeção real dos grandes HTMLs e os renders 3D completos continuam pendentes.
+
 ## 🚧 Estado atual
 
 O foco atual está na **definição da identidade visual**, produção e organização dos assets, desenvolvimento do **Refúgio dos Errantes** e aprofundamento do primeiro bioma de caça, **Escarpas Ancestrais**. Modelos, cenários e mecânicas estão sujeitos a mudanças durante os testes.
