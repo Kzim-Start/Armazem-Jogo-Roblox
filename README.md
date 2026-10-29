@@ -1,6 +1,8 @@
 # Fragmentos do Infinito 🌌
 ### Armazém de desenvolvimento | Jogo de aventura e caça no Roblox
 
+**Atlas das 21 armaduras (pré-produção):** [ver conceitos visuais SVG](catalogos/ATLAS_ARMADURAS_21.html) · [ver matriz de direção de arte](docs/MATRIZ_IDENTIDADE_VISUAL_ARMADURAS.md). Os catálogos originais de cada ilha estão preservados.
+
 > **Status:** Em desenvolvimento · **Plataforma:** Roblox · **Ferramentas:** Blender, Roblox Studio e referências visuais produzidas para o projeto
 
 Este repositório é o **armazém de criação de _Fragmentos do Infinito_**, um jogo original para Roblox que combina **exploração, combate contra criaturas gigantes, coleta de recursos, criação de equipamentos e progressão de habilidades** em um universo de ilhas e fragmentos de mundos flutuantes.
